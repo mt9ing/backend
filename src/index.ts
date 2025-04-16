@@ -7,5 +7,6 @@ const PORT = 5000;
 (async () => {
   const db = await dbConnection();
   await db.exec(`CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY, title TEXT NOT NULL)`);
+  console.log("DB created");  
   app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
-})
+})()
